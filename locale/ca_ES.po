@@ -1,0 +1,121 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:project.template.configuration,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:project.template.configuration,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:project.template.configuration,default_template:"
+msgid "Default Template"
+msgstr "Plantilla per defecte"
+
+msgctxt "field:project.template.configuration,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project.template.configuration,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.template.configuration,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:project.template.configuration,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:project.work,percentage:"
+msgid "Percentage"
+msgstr "Percentatge"
+
+msgctxt "field:project.work,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+msgctxt "field:project_template.create_from_template_start,effort:"
+msgid "Effort"
+msgstr "Esforç"
+
+msgctxt "field:project_template.create_from_template_start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project_template.create_from_template_start,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "help:project_template.create_from_template_start,effort:"
+msgid "Total effort of the project/task."
+msgstr "Esforç total del project/tasca."
+
+msgctxt "help:project_template.create_from_template_start,name:"
+msgid "Name of the new project/task to create."
+msgstr "Nom del nou projecte/tasca a crear."
+
+msgctxt "model:ir.action,name:act_project_template_configuration_form"
+msgid "Templates Configuration"
+msgstr "Configuració de plantilles"
+
+msgctxt "model:ir.action,name:act_work_list"
+msgid "Templates"
+msgstr "Plantilles"
+
+msgctxt "model:ir.action,name:act_work_tree"
+msgid "Templates"
+msgstr "Plantilles"
+
+msgctxt "model:ir.action,name:wizard_project_template_create"
+msgid "Create Works"
+msgstr "Crea Projectes i Tasques"
+
+msgctxt ""
+"model:ir.action.act_window,name:act_project_template_configuration_form"
+msgid "Templates Configuration"
+msgstr "Configuració de plantilles"
+
+msgctxt "model:ir.action.act_window,name:act_work_list"
+msgid "Templates"
+msgstr "Plantilles"
+
+msgctxt "model:ir.action.act_window,name:act_work_tree"
+msgid "Templates"
+msgstr "Plantilles"
+
+msgctxt "model:ir.action.wizard,name:wizard_project_template_create"
+msgid "Create Works"
+msgstr "Crea Projectes i Tasques"
+
+msgctxt "model:ir.ui.menu,name:menu_project_template_configuration"
+msgid "Templates Configuration"
+msgstr "Configuració de plantilles"
+
+msgctxt "model:ir.ui.menu,name:menu_template_list"
+msgid "Templates"
+msgstr "Plantilles"
+
+msgctxt "model:ir.ui.menu,name:menu_template_tree"
+msgid "Templates"
+msgstr "Plantilles"
+
+msgctxt "model:project.template.configuration,name:"
+msgid "Project Template Configuration"
+msgstr "Configuració de plantilles de projecte"
+
+msgctxt "model:project_template.create_from_template_start,name:"
+msgid "Create From Template Start"
+msgstr "Inici de Crea desde plantilla "
+
+msgctxt ""
+"wizard_button:project_template.create_from_template,start,creatework:"
+msgid "Create Project"
+msgstr "Crea Projecte"
+
+msgctxt "wizard_button:project_template.create_from_template,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"

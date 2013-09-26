@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+          copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="work_view_form">
+          <field name="model">project.work</field>
+          <field name="inherit" ref="project.work_view_form"/>
+          <field name="name">work_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="project.act_work_tree">
+            <field name="domain">[('parent', '=', None),('template', '=', False)]</field>
+        </record>
+        <record model="ir.action.act_window" id="project.act_work_list">
+            <field name="domain">[('template', '=', False)]</field>
+        </record>
+        <record model="ir.action.act_window" id="project.act_project_tree">
+            <field name="domain">[('parent', '=', None),('template', '=', False)]</field>
+        </record>
+        <record model="ir.action.act_window" id="project.act_project_form">
+            <field name="domain">[('type', '=', 'project'),('template', '=', False)]</field>
+        </record>
+        <record model="ir.action.act_window" id="project.act_task_form">
+            <field name="domain">[('type', '=', 'task'),('template', '=', False)]</field>
+        </record>
+        <record model="ir.action.act_window" id="act_work_tree">
+            <field name="name">Templates</field>
+            <field name="res_model">project.work</field>
+            <field name="domain">[('parent', '=', None),('template', '=', True)]</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_work_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project.work_view_tree"/>
+            <field name="act_window" ref="act_work_tree"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_work_tree_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project.work_view_form"/>
+            <field name="act_window" ref="act_work_tree"/>
+        </record>
+        <menuitem parent="project.menu_project" action="act_work_tree"
+            id="menu_template_tree"/>
+        <record model="ir.action.act_window" id="act_work_list">
+            <field name="name">Templates</field>
+            <field name="res_model">project.work</field>
+            <field name="domain">[('template', '=', True)]</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_work_list_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project.work_view_list"/>
+            <field name="act_window" ref="act_work_list"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_work_list_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project.work_view_form"/>
+            <field name="act_window" ref="act_work_list"/>
+        </record>
+        <menuitem parent="menu_template_tree" action="act_work_list"
+            id="menu_template_list"/>
+
+        <record model="ir.ui.view" id="create_from_template_start">
+          <field name="model">project_template.create_from_template_start</field>
+          <field name="type">form</field>
+          <field name="name">create_from_template</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_project_template_create">
+            <field name="name">Create Works</field>
+            <field name="wiz_name">project_template.create_from_template</field>
+            <field name="model">project.work</field>
+        </record>
+        <record model="ir.action.keyword" id="act_wizard_project_template_create_keyword">
+            <field name="keyword">form_action</field>
+            <field name="model">project.work,-1</field>
+            <field name="action" ref="wizard_project_template_create"/>
+        </record>
+
+    </data>
+</tryton>

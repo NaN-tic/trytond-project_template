@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+          copyright notices and license terms. -->
+<form string="Templates Configuration">
+    <label name="default_template"/>
+    <field name="default_template"/>
+</form>

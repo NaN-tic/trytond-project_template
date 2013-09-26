@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- This file is part of Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="project_template_configuration_view_form">
+            <field name="model">project.template.configuration</field>
+            <field name="type">form</field>
+            <field name="name">configuration_form</field>
+        </record>
+        <record model="ir.action.act_window" id="act_project_template_configuration_form">
+            <field name="name">Templates Configuration</field>
+            <field name="res_model">project.template.configuration</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_project_template_configuration_view1">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="project_template_configuration_view_form"/>
+            <field name="act_window" ref="act_project_template_configuration_form"/>
+        </record>
+        <menuitem parent="project.menu_configuration"
+            action="act_project_template_configuration_form"
+            id="menu_project_template_configuration" icon="tryton-list"/>
+    </data>
+</tryton>
