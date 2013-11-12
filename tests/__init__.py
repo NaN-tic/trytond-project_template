@@ -2,3 +2,5 @@
 #copyright notices and license terms.
 
 from .test_project_template import suite
+
+__all__ = ['suite']
