@@ -111,6 +111,14 @@ msgctxt "model:project_template.create_from_template_start,name:"
 msgid "Create From Template Start"
 msgstr "Inicio crear desde plantilla"
 
+msgctxt "view:project.template.configuration:"
+msgid "Templates Configuration"
+msgstr "Configuración de Plantillas"
+
+msgctxt "view:project_template.create_from_template_start:"
+msgid "Create From Template"
+msgstr "Crear desde plantilla"
+
 msgctxt ""
 "wizard_button:project_template.create_from_template,start,creatework:"
 msgid "Create Project"
