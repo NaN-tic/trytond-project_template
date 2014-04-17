@@ -4,11 +4,25 @@
 <tryton>
     <data>
 
-        <record model="ir.ui.view" id="work_view_form">
-          <field name="model">project.work</field>
-          <field name="inherit" ref="project.work_view_form"/>
-          <field name="name">work_form</field>
+        <record model="ir.ui.view" id="work_template_view_tree">
+            <field name="model">project.work</field>
+            <field name="type">tree</field>
+            <field name="field_childs">children</field>
+            <field name="name">work_template_tree</field>
         </record>
+
+        <record model="ir.ui.view" id="work_template_view_list">
+            <field name="model">project.work</field>
+            <field name="type">tree</field>
+            <field name="name">work_template_list</field>
+        </record>
+
+        <record model="ir.ui.view" id="work_template_view_form">
+            <field name="model">project.work</field>
+            <field name="type">form</field>
+            <field name="name">work_template_form</field>
+        </record>
+
 
         <record model="ir.action.act_window" id="project.act_work_tree">
             <field name="domain">[('parent', '=', None),('template', '=', False)]</field>
@@ -33,13 +47,13 @@
         <record model="ir.action.act_window.view"
             id="act_work_tree_view1">
             <field name="sequence" eval="10"/>
-            <field name="view" ref="project.work_view_tree"/>
+            <field name="view" ref="work_template_view_tree"/>
             <field name="act_window" ref="act_work_tree"/>
         </record>
         <record model="ir.action.act_window.view"
             id="act_work_tree_view2">
             <field name="sequence" eval="20"/>
-            <field name="view" ref="project.work_view_form"/>
+            <field name="view" ref="work_template_view_form"/>
             <field name="act_window" ref="act_work_tree"/>
         </record>
         <menuitem parent="project.menu_project" action="act_work_tree"
@@ -52,13 +66,13 @@
         <record model="ir.action.act_window.view"
             id="act_work_list_view1">
             <field name="sequence" eval="10"/>
-            <field name="view" ref="project.work_view_list"/>
+            <field name="view" ref="work_template_view_list"/>
             <field name="act_window" ref="act_work_list"/>
         </record>
         <record model="ir.action.act_window.view"
             id="act_work_list_view2">
             <field name="sequence" eval="20"/>
-            <field name="view" ref="project.work_view_form"/>
+            <field name="view" ref="work_template_view_form"/>
             <field name="act_window" ref="act_work_list"/>
         </record>
         <menuitem parent="menu_template_tree" action="act_work_list"
