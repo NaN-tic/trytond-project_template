@@ -36,19 +36,23 @@ class Work:
         return works
 
     @classmethod
-    def write(cls, works, values):
+    def write(cls, *args):
         transaction = Transaction()
         context = transaction.context
-        if 'template' in values and not context.get('template', False):
-            to_update = cls.search([
-                    ('parent', 'child_of', [w.id for w in works]),
-                    ('active', '=', True),
-                    ]) + works
+        actions = iter(args)
+        args = []
+        for works, values in zip(actions, actions):
+            if 'template' in values and not context.get('template', False):
+                to_update = cls.search([
+                        ('parent', 'child_of', [w.id for w in works]),
+                        ('active', '=', True),
+                        ]) + works
 
-            with transaction.set_context(template=True):
-                cls.write(to_update, {'template': values['template']})
-            del values['template']
-        return super(Work, cls).write(works, values)
+                with transaction.set_context(template=True):
+                    cls.write(to_update, {'template': values['template']})
+            else:
+                args.extend((works, values))
+        return super(Work, cls).write(*args)
 
     @classmethod
     def create_from_template(cls, works, name, effort):
