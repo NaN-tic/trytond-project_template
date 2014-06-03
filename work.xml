@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
 <!-- The COPYRIGHT file at the top level of this repository contains the full
-          copyright notices and license terms. -->
+     copyright notices and license terms. -->
 <tryton>
     <data>
-
         <record model="ir.ui.view" id="work_template_view_tree">
             <field name="model">project.work</field>
             <field name="type">tree</field>
@@ -22,7 +21,6 @@
             <field name="type">form</field>
             <field name="name">work_template_form</field>
         </record>
-
 
         <record model="ir.action.act_window" id="project.act_work_tree">
             <field name="domain">[('parent', '=', None),('template', '=', False)]</field>
@@ -94,6 +92,5 @@
             <field name="model">project.work,-1</field>
             <field name="action" ref="wizard_project_template_create"/>
         </record>
-
     </data>
 </tryton>
