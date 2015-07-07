@@ -72,7 +72,7 @@ msgstr "Plantillas"
 
 msgctxt "model:ir.action,name:wizard_project_template_create"
 msgid "Create Works"
-msgstr "Crear Proyectos i Tareas"
+msgstr "Crear proyectos y tareas"
 
 msgctxt ""
 "model:ir.action.act_window,name:act_project_template_configuration_form"
@@ -93,7 +93,7 @@ msgstr "Crear proyectos i tareas"
 
 msgctxt "model:ir.ui.menu,name:menu_project_template_configuration"
 msgid "Templates Configuration"
-msgstr "Configuración de Plantillas"
+msgstr "Configuración de plantillas"
 
 msgctxt "model:ir.ui.menu,name:menu_template_list"
 msgid "Templates"
@@ -105,7 +105,7 @@ msgstr "Plantillas"
 
 msgctxt "model:project.template.configuration,name:"
 msgid "Project Template Configuration"
-msgstr "Configuración de Plantillas de Proyecto"
+msgstr "Configuración de plantillas de proyecto"
 
 msgctxt "model:project_template.create_from_template_start,name:"
 msgid "Create From Template Start"
